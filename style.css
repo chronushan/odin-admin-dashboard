@@ -381,6 +381,7 @@ body {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	grid-template-rows: 1fr 1fr;
+	background-color: lightgray;
 }
 
 .sidebar img {
@@ -490,17 +491,24 @@ button {
 
 .main-profile p:last-child {
 	font-weight: bold;
+	font-size: larger;
 	margin-top: 5px;
 }
 
-.main-content p {
+.main-content > div:first-child {
+	display: grid;
+	grid-template-rows: min-content 1fr;
+}
+.main-content > div:first-child > p {
+	margin-left: 15px;
 }
 
 .projects {
-	grid-row: 1/-1;
-	grid-column: 1/2;
+	grid-row: 2/-1;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 15px;
+	margin: 15px;
 }
 
 .announcements {
@@ -511,4 +519,16 @@ button {
 .trending {
 	grid-row: 2/-1;
 	grid-column: 2/-1;
+}
+
+.card {
+	background-color: white;
+	border-radius: 15px;
+	padding: 0px 15px;
+	border-left: solid orange 0.3rem;
+}
+
+.subtitle {
+	font-weight: bold;
+	font-size: large;
 }
