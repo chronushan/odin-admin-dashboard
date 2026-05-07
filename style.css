@@ -354,7 +354,7 @@ template {
 
 body {
 	display: grid;
-	grid-template: min-content 1fr / 1fr 5fr;
+	grid-template: min-content min-content 1fr / 1fr 5fr;
 }
 
 .sidebar {
@@ -378,9 +378,9 @@ body {
 .main-content {
 	grid-column: 2/-1;
 	grid-row: 2/-1;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 1fr 1fr;
 }
 
 .sidebar img {
@@ -493,4 +493,22 @@ button {
 	margin-top: 5px;
 }
 
-.main-content
+.main-content p {
+}
+
+.projects {
+	grid-row: 1/-1;
+	grid-column: 1/2;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.announcements {
+	grid-column: 2/-1;
+	grid-row: 1/2;
+}
+
+.trending {
+	grid-row: 2/-1;
+	grid-column: 2/-1;
+}
